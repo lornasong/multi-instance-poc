@@ -20,5 +20,5 @@ variable "services" {
 variable "workspace" {
   description = "workspace name"
   type = string
-  default = "consul-east"
+  default = "east"
 }
