@@ -1,7 +1,7 @@
 terraform {
     required_version = ">=0.12"
 
-    # Configuration block to use Consul as Terraform Backend
+    # Configuration block to use Consul as Terraform backend
     # backend "consul" {
     #     address = "127.0.0.1:8500"
     #     scheme  = "http"

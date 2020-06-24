@@ -43,7 +43,7 @@ In the `east` workspace, Terraform apply creates only the `web1` resource (text 
 
 ## Consul Backend
 
-To use consul backend,
+To use Consul backend,
 1. start up consul server agent with `consul agent -dev` (no configuration needed)
 2. Uncomment out consul-backend block in `main.tf`
 3. Do Terraform CLI steps listed above
