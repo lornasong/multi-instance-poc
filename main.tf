@@ -7,6 +7,15 @@ terraform {
     #     scheme  = "http"
     #     path    = "network/terraform"
     # }
+
+    # Configuration block to use TFC as backend
+    # backend "remote" {
+    #     hostname = "app.terraform.io"
+    #     organization = "network"
+    #     workspaces {
+    #         prefix= "instance-"
+    #     }
+    # }
 }
 
 module "local" {
