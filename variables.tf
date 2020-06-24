@@ -16,3 +16,9 @@ variable "services" {
     address = string
   }))
 }
+
+variable "workspace" {
+  description = "workspace name"
+  type = string
+  default = "consul-east"
+}

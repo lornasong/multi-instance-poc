@@ -13,3 +13,5 @@ services = {
     address = "192.0.0.13:5000"
   }
 }
+
+workspace = "west"
