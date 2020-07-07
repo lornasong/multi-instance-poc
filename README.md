@@ -5,12 +5,10 @@ This POC creates local-file resources for a given workspace. Given the same Terr
 
 ## Steps:
 1. `terraform init`
-2. Create a [workspace](https://www.terraform.io/docs/commands/workspace/new.html) `terraform workspace new instance-east`
-3. Manually update `terraform.auto.tfvars` for the variable `workspace` to the value `east`
-4. `terraform apply`
-2. `terraform workspace new instance-west`
-3. Manually update `terraform.auto.tfvars` for the variable `workspace` to the value `west`
-4. `terraform apply`
+2. Create a [workspace](https://www.terraform.io/docs/commands/workspace/new.html) `terraform workspace new east`
+3. `terraform apply -var 'workspace=east`
+4. `terraform workspace new west`
+5. `terraform apply -var 'workspace=west`
 
 
 
