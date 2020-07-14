@@ -7,9 +7,18 @@ terraform {
     #     scheme  = "http"
     #     path    = "network/terraform"
     # }
+
+    # Configuration block to use TFC as backend
+    # backend "remote" {
+    #     hostname = "app.terraform.io"
+    #     organization = "network"
+    #     workspaces {
+    #         prefix= "instance-"
+    #     }
+    # }
 }
 
 module "local" {
     source = "./modules/local"
-    services = { for name in var.service_mapping[terraform.workspace] : name => var.services[name]}
+    services = { for name in var.service_mapping[var.workspace] : name => var.services[name]}
 }
