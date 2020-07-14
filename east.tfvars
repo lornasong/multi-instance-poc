@@ -1,8 +1,3 @@
-service_mapping = {
-  west = ["web1", "web2"]
-  east = ["web1"]
-}
-
 services = {
   web1: {
     name = "web1"
@@ -14,4 +9,4 @@ services = {
   }
 }
 
-workspace = "west"
+workspace = "east"

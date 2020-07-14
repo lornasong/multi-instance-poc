@@ -6,19 +6,14 @@ This POC creates local-file resources for a given workspace. Given the same Terr
 ## Steps:
 1. `terraform init`
 2. Create a [workspace](https://www.terraform.io/docs/commands/workspace/new.html) `terraform workspace new east`
-3. `terraform apply -var 'workspace=east`
+3. `terraform apply -var-file="east.tfvars"`
 4. `terraform workspace new west`
-5. `terraform apply -var 'workspace=west`
+5. `terraform apply -var-file="west.tfvars"`
 
 
 
 ## For the example variables:
 ```
-service_mapping = {
-  west = ["web1", "web2"]
-  east = ["web1"]
-}
-
 services = {
   web1: {
     name = "web1"
@@ -58,4 +53,4 @@ After running steps, separate state files for each workspace will be in KV store
 
 **Update workspace**
 
-Follow steps above
+Follow steps listed in "Steps" section
