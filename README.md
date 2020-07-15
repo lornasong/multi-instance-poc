@@ -12,7 +12,11 @@ This POC creates local-file resources for a given workspace. Given the same Terr
 
 
 
-## For the example variables:
+## What to expect:
+
+Each instance has it's own `tfvars` file containing the services that it will create resources (text files in our case) for with the related attributes (ip address as content in text file).
+
+For example, east instance has `east.tfvars` containing:
 ```
 services = {
   web1: {
@@ -25,9 +29,8 @@ services = {
   }
 }
 ```
-In the `west` workspace, Terraform apply creates a `web1` and `web2` resource (text file) with related attributes (ip address in the text file)
 
-In the `east` workspace, Terraform apply creates only the `web1` resource (text file) with related attributes (ip address in the text file)
+In the `east` workspace, `terraform apply` creates a `web1.txt` and `web2.txt` with the addresses as content.
 
 ## Consul Backend
 
